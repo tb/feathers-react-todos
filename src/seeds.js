@@ -27,7 +27,6 @@ async function main() {
     },
     {
       text: 'Todo 2.2',
-      owner: user,
     }
   ]);
 
