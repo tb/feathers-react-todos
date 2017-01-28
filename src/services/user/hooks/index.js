@@ -18,6 +18,7 @@ exports.before = {
     auth.restrictToOwner({ ownerField: '_id' })
   ],
   create: [
+    globalHooks.googleAuthCallback(),
     auth.hashPassword()
   ],
   update: [

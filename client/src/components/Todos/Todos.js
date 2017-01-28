@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
-import io from 'socket.io-client';
-import feathers from 'feathers/client';
-import socketio from 'feathers-socketio/client';
-import rx from 'feathers-reactive';
-import RxJS from 'rxjs';
+import { clientRx } from '../../client';
 
 import {
   Button,
@@ -12,12 +8,7 @@ import {
   TextField,
 } from 'react-md/lib';
 
-// eslint-disable-next-line
-const socket = window.socket = io('http://localhost:3030');
-const app = window.app = feathers()
-  .configure(socketio(socket))
-  .configure(rx(RxJS, {idField: '_id'}));
-const todos = app.service('todos');
+const todos = clientRx.service('todos');
 
 class Todos extends Component {
   state = {
@@ -38,8 +29,6 @@ class Todos extends Component {
   }
 
   createTodo(ev) {
-    debugger
-
     ev.preventDefault();
     todos.create({
       text: this.state.text,

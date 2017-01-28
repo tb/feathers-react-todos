@@ -87,6 +87,9 @@ if (devBuild) {
         target: 'http://localhost:3030',
         ws: true,
       },
+      '/auth/**': {
+        target: 'http://localhost:3030',
+      },
     }
   };
 }

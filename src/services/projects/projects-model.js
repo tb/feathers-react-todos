@@ -5,13 +5,12 @@
 // See http://mongoosejs.com/docs/models.html
 // for more of what you can do here.
 
-const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
+import mongoose, { Schema } from '../../db/mongoose';
 
 const projectsSchema = new Schema({
   name: { type: String, required: true },
-  owner: { type: mongoose.Schema.Types.ObjectId, ref: 'user' },
-  todos: [{ type: mongoose.Schema.Types.ObjectId, ref: 'todos' }],
+  owner: { type: Schema.Types.ObjectId, ref: 'user' },
+  todos: [{ type: Schema.Types.ObjectId, ref: 'todos' }],
 
   createdAt: { type: Date, 'default': Date.now },
   updatedAt: { type: Date, 'default': Date.now }

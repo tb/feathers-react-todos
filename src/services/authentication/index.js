@@ -9,7 +9,10 @@ module.exports = function() {
   const app = this;
 
   let config = app.get('auth');
-  
+
+  config.successRedirect = '/';
+  config.failureRedirect = '/#/login';
+
   config.google.strategy = GoogleStrategy;
   config.google.tokenStrategy = GoogleTokenStrategy;
 

@@ -9,6 +9,7 @@ exports.before = {
     // auth.verifyToken(),
     auth.populateUser(),
     // auth.restrictToAuthenticated()
+    // auth.restrictToOwner({ ownerField: 'owner' }),
   ],
   find: [],
   get: [],

@@ -5,6 +5,7 @@ const serveStatic = require('feathers').static;
 const compress = require('compression');
 const cors = require('cors');
 const feathers = require('feathers');
+const authentication = require('feathers-authentication');
 const configuration = require('feathers-configuration');
 const hooks = require('feathers-hooks');
 const rest = require('feathers-rest');
@@ -27,6 +28,7 @@ app.use(compress())
   .configure(rest())
   .configure(socketio())
   .configure(services)
-  .configure(middleware);
+  .configure(middleware)
+  .configure(authentication);
 
 module.exports = app;

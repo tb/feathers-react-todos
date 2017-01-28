@@ -7,7 +7,10 @@ import Todos from '../Todos/Todos';
 class App extends Component {
   render() {
     return (
-      <Todos />
+      <div>
+        <a href="/auth/google">Login via Google</a>
+        <Todos />
+      </div>
     );
   }
 };

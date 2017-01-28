@@ -15,6 +15,8 @@ Getting up and running is as easy as 1, 2, 3.
     
     ```
     cd path/to/feathers-react-todos; npm install
+    cp .env.example .env
+    edit .env
     ```
 
 3. Start your app
@@ -44,12 +46,6 @@ $ feathers help                           # Show all commands
 ## Help
 
 For more information on all the things you can do with Feathers visit [docs.feathersjs.com](http://docs.feathersjs.com).
-
-## Changelog
-
-__0.1.0__
-
-- Initial release
 
 ## License
 
