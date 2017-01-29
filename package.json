@@ -19,7 +19,8 @@
     "test": "npm run jshint && npm run mocha",
     "jshint": "jshint src/. test/. --config",
     "seeds": "babel-node src/db/seeds.js",
-    "start": "nodemon src/index.js --exec babel-node",
+    "start": "nodemon src/index.js",
+    "start:debugger": "iron-node src/index.js",
     "mocha": "mocha test/ --recursive"
   },
   "dependencies": {
@@ -46,7 +47,9 @@
     "babel-cli": "^6.22.2",
     "babel-preset-es2015": "^6.22.0",
     "babel-preset-stage-0": "^6.22.0",
+    "babel-register": "^6.22.0",
     "dotenv": "^4.0.0",
+    "iron-node": "^3.0.17",
     "jshint": "^2.9.4",
     "mocha": "^3.2.0",
     "nodemon": "^1.11.0",

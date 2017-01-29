@@ -8,11 +8,11 @@
 
 import { get } from 'lodash';
 
-exports.debug = function(key) {
+// IMPORTANT: start server with: npm run start:dbg
+exports.debugger = function() {
   return function(hook) {
-    console.log('************************');
-    console.log(key ? get(hook, key) : hook);
-    console.log('************************');
+    console.log(hook);
+    debugger;
   };
 };
 
