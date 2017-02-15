@@ -1,5 +1,8 @@
 'use strict';
 
+// Load environment variables.
+require('dotenv').config({});
+
 const path = require('path');
 const serveStatic = require('feathers').static;
 const compress = require('compression');

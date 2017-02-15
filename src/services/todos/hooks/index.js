@@ -6,9 +6,8 @@ const auth = require('feathers-authentication').hooks;
 
 exports.before = {
   all: [
-    globalHooks.debugger(),
     // auth.verifyToken(),
-    auth.populateUser(),
+    // auth.populateUser(),
     // auth.restrictToAuthenticated(),
     // auth.restrictToOwner({ ownerField: 'owner' }),
   ],

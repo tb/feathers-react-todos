@@ -14,7 +14,7 @@ import RxJS from 'rxjs';
 // eslint-disable-next-line
 const socket = window.socket = io('http://localhost:3030');
 
-export const client =  window.client = feathers()
+export const client = window.client = feathers()
   .configure(hooks())
   .configure(socketio(socket))
   .configure(authentication({ storage: window.localStorage, idField: '_id' }));
