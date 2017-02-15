@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { clientRx } from '../../client';
+import { clientRx } from '../../feathers';
 
 import {
   Button,
