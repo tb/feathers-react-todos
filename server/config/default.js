@@ -2,7 +2,7 @@ module.exports = {
   host: "localhost",
   port: 3030,
   mongodb: process.env.DATABASE_URL || "DATABASE_URL",
-  public: "../client/public/",
+  public: "../../client/public/",
   auth: {
     token: {
       secret: process.env.FEATHERS_AUTH_SECRET || "FEATHERS_AUTH_SECRET",

@@ -19,6 +19,10 @@ export const client = window.client = feathers()
   .configure(socketio(socket))
   .configure(authentication({ storage: window.localStorage, idField: '_id' }));
 
+// client.authenticate({
+//   type: 'jwt',
+//   accessToken: cookie.load('feathers-jwt')
+// });
+
 export const clientRx = client
   .configure(rx(RxJS, { idField: '_id' }));
-
