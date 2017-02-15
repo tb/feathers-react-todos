@@ -31,3 +31,5 @@ lib/
 data/
 .idea/
 .env
+server2
+server-rest

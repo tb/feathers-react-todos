@@ -17,7 +17,8 @@ class Todos extends Component {
   };
 
   componentDidMount() {
-    this.todos$ = todos.find().subscribe(todos => this.setState({todos: [...todos.data], loaded: true}));
+    this.todos$ = todos.find()
+      .subscribe(todos => this.setState({todos: [...todos.data], loaded: true}));
   }
 
   componentWillUnmount() {
@@ -70,7 +71,10 @@ class Todos extends Component {
       <div className='container'>
         <div className="md-grid">
           <div className="md-cell md-cell--6">
-            {!this.state.loaded && <CircularProgress key="progress" id="todos-loading"/>}
+            {
+              !this.state.loaded &&
+              <CircularProgress key="progress" id="todos-loading"/>
+            }
             <table className="mdl-data-table md-data-table--plain">
               <tbody>
                 {this.state.todos.map(renderTodo)}

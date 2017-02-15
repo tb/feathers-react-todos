@@ -12,8 +12,8 @@ async function main() {
   });
 
   const user2 = await app.service('users').create({
-    email: 'user1@example.com',
-    password: 'secret'
+    email: 'admin@feathersjs.com',
+    password: 'secret',
   });
 
   await todosModel.remove({});
